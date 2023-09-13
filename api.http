@@ -1,0 +1,40 @@
+### Methods GET
+### Recuperar todas las peliculas  ✔
+Get http://localhost:1234/movies
+
+### Recuperar una pelicula por id  ✔
+GET  http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Busqueda por paginacion --> Hacer !!!!!
+Get http://localhost:1234/movies?page=1
+
+### Recuperar una pelicula por el genero ✔
+Get http://localhost:1234/movies?genre=crime
+
+### Recuperar una pelicula por el año ✔
+Get http://localhost:1234/movies?year=1975
+
+### Methods POST
+### Crear una pelicula ✔
+POST http://localhost:1234/movies 
+Content-Type: application/json
+
+{
+    "title": "The Godfather",
+    "year": 1972,
+    "director": "Francis Ford Coppola",
+    "duration": 175,
+    "poster": "https://img.fruugo.com/product/4/49/1444184_max.jpg",
+    "genre": [
+       "Action",
+       "Drama"
+    ]    
+}
+
+### Actualizar una pelicula ✔
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year":1995
+}
